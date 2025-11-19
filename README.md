@@ -79,53 +79,61 @@ As soon as I have access to HackRF One, I will start adding:
 
 A quick overview of the main folders in this project:
 
-- `docs/` – learning plan, roadmap, HackRF study notes and experiment ideas,  
-  plus conceptual notes on IQ, spectra, FM, ADS-B, and several short texts in Georgian.
-- `notes/` – external links and references I use while learning SDR and satellites  
-- `examples/` – small Python scripts for generating and analysing IQ recordings  
-- `images/` – screenshots of spectra, waterfalls, and satellite experiments
+- `docs/basics/` – core SDR and RF theory in English  
+  (IQ, spectra, sampling & aliasing, signal chain, FM, ADS-B).
+- `docs/basics-ka/` – the same core ideas explained in Georgian.
+- `docs/roadmap/` – learning plan, prerequisites, TODO roadmap,
+  and workshop ideas for future students.
+- `docs/project/` – HackRF-specific notes, first-steps guides,
+  experiment ideas, targets/frequencies and legal/ethics notes.
+- `notes/` – external links and references I use while learning SDR and satellites.
+- `examples/` – small Python scripts for generating and analysing IQ recordings.
+- `images/` – screenshots of spectra, waterfalls, and satellite/aliasing experiments.
 
 ## Learning Notes
 
-Some of the key documentation files in `docs/`:
+Some of the key documentation files:
 
-- [`docs/iq-and-spectra-basics.md`](docs/iq-and-spectra-basics.md)  
+- [`docs/basics/iq-and-spectra-basics.md`](docs/basics/iq-and-spectra-basics.md)  
   Beginner notes on IQ data, spectrum and waterfall plots.
 
-- [`docs/signal-chain-overview.md`](docs/signal-chain-overview.md)  
+- [`docs/basics/sampling-and-aliasing-basics.md`](docs/basics/sampling-and-aliasing-basics.md)  
+  Notes on sampling rate, Nyquist, aliasing and example spectra from the
+  aliasing demo.
+
+- [`docs/basics/signal-chain-overview.md`](docs/basics/signal-chain-overview.md)  
   High-level overview: from real radio waves, through HackRF and IQ, to software
   visualisation and decoding.
 
-- [`docs/fm-from-iq-basics.md`](docs/fm-from-iq-basics.md)  
+- [`docs/basics/fm-from-iq-basics.md`](docs/basics/fm-from-iq-basics.md)  
   How FM looks in IQ data and a simple explanation of FM demodulation.
 
-- [`docs/adsb-from-iq-basics.md`](docs/adsb-from-iq-basics.md)  
+- [`docs/basics/adsb-from-iq-basics.md`](docs/basics/adsb-from-iq-basics.md)  
   Basics of ADS-B aircraft signals (1090 MHz), how they look in IQ, spectrum and
   waterfall, and how they are decoded.
 
-- [`docs/prerequisites-and-learning-path.md`](docs/prerequisites-and-learning-path.md)  
-  What background knowledge is helpful and a suggested learning path for this lab
-  (IQ → FM → ADS-B → satellites).
-
 **Georgian-language notes:**
 
-- [`docs/iq-basics-ka.md`](docs/iq-basics-ka.md)  
+- [`docs/basics-ka/iq-basics-ka.md`](docs/basics-ka/iq-basics-ka.md)  
   Short Georgian explanation of IQ data and spectra.
 
-- [`docs/sdr-intro-ka.md`](docs/sdr-intro-ka.md)  
-  Intro to SDR and HackRF in Georgian.
+- [`docs/basics-ka/sampling-and-aliasing-basics-ka.md`](docs/basics-ka/sampling-and-aliasing-basics-ka.md)  
+  Sampling rate and aliasing explained in Georgian with the same plots.
 
-- [`docs/signal-chain-ka.md`](docs/signal-chain-ka.md)  
+- [`docs/basics-ka/signal-chain-ka.md`](docs/basics-ka/signal-chain-ka.md)  
   Signal chain from antenna to computer, explained in Georgian.
 
-- [`docs/fm-from-iq-basics-ka.md`](docs/fm-from-iq-basics-ka.md)  
+- [`docs/basics-ka/fm-from-iq-basics-ka.md`](docs/basics-ka/fm-from-iq-basics-ka.md)  
   FM fundamentals from IQ, in Georgian.
 
-- [`docs/adsb-from-iq-basics-ka.md`](docs/adsb-from-iq-basics-ka.md)  
+- [`docs/basics-ka/adsb-from-iq-basics-ka.md`](docs/basics-ka/adsb-from-iq-basics-ka.md)  
   ADS-B basics and aircraft signals, in Georgian.
 
-- [`docs/prerequisites-and-learning-path-ka.md`](docs/prerequisites-and-learning-path-ka.md)  
-  Learning roadmap in Georgian for local students.
+- [`docs/roadmap/prerequisites-and-learning-path.md`](docs/roadmap/prerequisites-and-learning-path.md)  
+  Recommended learning path (IQ → FM → ADS-B → satellites).
+
+- [`docs/roadmap/prerequisites-and-learning-path-ka.md`](docs/roadmap/prerequisites-and-learning-path-ka.md)  
+  The same learning roadmap in Georgian for local students.
 
 These documents are written as learning notes for myself and for other
 students who want to understand what SDR is really doing, in both English
@@ -149,6 +157,10 @@ Small Python scripts used for learning and visualising IQ data:
   Very simple FM demodulation from an IQ recording to a mono WAV file.  
   Intended as a learning demo, not a full broadcast-quality receiver.
 
+- `examples/aliasing_demo.py`  
+  Generate tones at different frequencies relative to the sampling rate,
+  to see how aliasing moves them around in the baseband spectrum.
+
 ### Example spectrum from the test tone
 
 After running `generate_test_tone.py` and `plot_spectrum.py` on a synthetic
@@ -162,7 +174,7 @@ centre frequency):
 </p>
 
 (Additional full-size spectrum and waterfall screenshots are referenced from
-`docs/iq-and-spectra-basics.md`.)
+[`docs/basics/iq-and-spectra-basics.md`](docs/basics/iq-and-spectra-basics.md).)
 
 ## Quick Start
 
