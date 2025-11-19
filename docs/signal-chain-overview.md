@@ -71,4 +71,80 @@ From "waves in the air" to something I can see or process:
    From IQ data, software can:
 
    - Compute a **spectrum**:
-     - show how much energy there
+     - show how much energy there is at each frequency in a short time window.
+   - Build a **waterfall**:
+     - show how the spectrum changes over time.
+   - Demodulate and decode:
+     - FM audio,
+     - ADS-B aircraft messages,
+     - data from satellites (where legally allowed),
+     - other protocols.
+
+---
+
+## 2. Live vs recorded IQ
+
+There are two common ways to work with IQ data:
+
+1. **Live mode**
+
+   - HackRF streams IQ samples in real time.
+   - Software (GQRX, SDRangel, GNU Radio) shows:
+     - spectrum and waterfall,
+     - live demodulated audio or decoded messages.
+
+2. **Recorded mode**
+
+   - IQ samples are saved to a file (for example `recording.cfile`).
+   - Later, scripts or GNU Radio flowgraphs can:
+     - replay the file,
+     - analyse it,
+     - try new filters and decoders without needing live hardware.
+
+In this project I start with **offline analysis**:
+
+- generate synthetic IQ data (`generate_test_tone.py`),
+- plot spectrum and waterfall (`plot_spectrum.py`, `plot_waterfall.py`).
+
+Later, I plan to move to **real recordings from HackRF One** and apply
+the same tools to actual FM, ADS-B and satellite signals.
+
+---
+
+## 3. Where IQ fits in the protocol stack
+
+IQ data is at the **lowest digital level** of the radio signal:
+
+- IQ: samples that describe the waveform near a certain frequency.
+- From IQ, we can demodulate to:
+  - audio (for analog modes like FM/AM),
+  - bits (for digital modes).
+
+From those bits, higher-level protocols appear:
+
+- For example:
+  - IQ at 1090 MHz → demodulation → ADS-B frames → aircraft positions.
+  - IQ in the FM band → FM demodulation → audio samples → sound.
+
+HackRF only gives IQ. All higher-level decoding happens in software.
+
+---
+
+## 4. Relation to this repository
+
+In this repository:
+
+- `examples/` contains Python scripts that:
+  - generate test IQ data (`generate_test_tone.py`),
+  - plot spectra (`plot_spectrum.py`),
+  - plot waterfalls (`plot_waterfall.py`).
+
+- `docs/iq-and-spectra-basics.md` explains:
+  - what IQ data is,
+  - how spectrum and waterfall plots are computed from it.
+
+- Later, I plan to add:
+  - GNU Radio flowgraphs for FM, ADS-B, and satellites,
+  - demodulation and decoding examples,
+  - tutorials (English + Georgian) that connect the theory to real
+    HackRF experiments.
