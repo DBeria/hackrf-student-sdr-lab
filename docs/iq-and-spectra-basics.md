@@ -100,7 +100,7 @@ iq_win = iq * window
 spectrum = np.fft.fft(iq_win)
 spectrum = np.fft.fftshift(spectrum)  # move 0 Hz to centre
 spectrum_db = 20 * np.log10(np.abs(spectrum) + 1e-9)
-
+```
 ## 6. Example plots from a synthetic test tone
 
 These are real plots generated with the scripts in `examples/`:
