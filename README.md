@@ -82,7 +82,7 @@ A quick overview of the main folders in this project:
   plus conceptual notes on IQ, spectra, FM, ADS-B, and several short texts in Georgian.
 - `notes/` – external links and references I use while learning SDR and satellites  
 - `examples/` – small Python scripts for generating and analysing IQ recordings  
-- `images/` (planned) – screenshots of spectra, waterfalls, and satellite experiments
+- `images/` – screenshots of spectra, waterfalls, and satellite experiments
 
 ## Learning Notes
 
@@ -148,19 +148,20 @@ Small Python scripts used for learning and visualising IQ data:
   Very simple FM demodulation from an IQ recording to a mono WAV file.  
   Intended as a learning demo, not a full broadcast-quality receiver.
 
-### Example results from the test tone
+### Example spectrum from the test tone
 
-After running `generate_test_tone.py`, `plot_spectrum.py` and
-`plot_waterfall.py` on the synthetic IQ file, I get the following plots.
+After running `generate_test_tone.py` and `plot_spectrum.py` on a synthetic
+IQ file, I get the following spectrum plot (two strong tones around the
+centre frequency):
 
-**Power spectrum of the IQ recording** – two strong tones around the
-centre frequency:
+<p align="center">
+  <img src="images/test_tone_spectrum.png"
+       alt="Test tone spectrum"
+       width="450">
+</p>
 
-![Test tone spectrum](images/test_tone_spectrum.png)
-
-**Waterfall of the same IQ recording** – the tones stay constant over time:
-
-![Test tone waterfall](images/test_tone_waterfall.png)
+(Additional full-size spectrum and waterfall screenshots are referenced from
+`docs/iq-and-spectra-basics.md`.)
 
 ## Quick Start
 
