@@ -148,6 +148,20 @@ Small Python scripts used for learning and visualising IQ data:
   Very simple FM demodulation from an IQ recording to a mono WAV file.  
   Intended as a learning demo, not a full broadcast-quality receiver.
 
+### Example results from the test tone
+
+After running `generate_test_tone.py`, `plot_spectrum.py` and
+`plot_waterfall.py` on the synthetic IQ file, I get the following plots.
+
+**Power spectrum of the IQ recording** – two strong tones around the
+centre frequency:
+
+![Test tone spectrum](images/test_tone_spectrum.png)
+
+**Waterfall of the same IQ recording** – the tones stay constant over time:
+
+![Test tone waterfall](images/test_tone_waterfall.png)
+
 ## Quick Start
 
 These scripts are designed to work with any complex64 IQ recordings,
