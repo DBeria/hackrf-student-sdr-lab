@@ -100,3 +100,19 @@ iq_win = iq * window
 spectrum = np.fft.fft(iq_win)
 spectrum = np.fft.fftshift(spectrum)  # move 0 Hz to centre
 spectrum_db = 20 * np.log10(np.abs(spectrum) + 1e-9)
+
+## 6. Example plots from a synthetic test tone
+
+These are real plots generated with the scripts in `examples/`:
+
+1. `generate_test_tone.py` – creates a complex64 IQ file with two tones  
+2. `plot_spectrum.py` – draws the power spectrum  
+3. `plot_waterfall.py` – draws the time–frequency waterfall
+
+**Power spectrum of the IQ recording** – two strong tones around the centre:
+
+![Test tone spectrum](../images/test_tone_spectrum.png)
+
+**Waterfall of the same IQ recording** – the tones stay constant over time:
+
+![Test tone waterfall](../images/test_tone_waterfall.png)
