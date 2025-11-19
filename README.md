@@ -14,8 +14,20 @@ collects my notes, examples and tutorials step by step.
 > I live in Tbilisi, Georgia, where SDR and HackRF are still almost
 > unknown and there are very few local learning resources. With this
 > project I want to create simple, practical examples and tutorials in
-> **both English and Georgian**, so that students here can have an easier
+> both English and Georgian, so that students here can have an easier
 > starting point than I did.
+
+## Table of Contents
+
+- [Goals](#goals)
+- [Why this project matters (especially in Georgia)](#why-this-project-matters-especially-in-georgia)
+- [Current Status](#current-status)
+- [Repository Structure](#repository-structure)
+- [Quick Start](#quick-start)
+- [Planned Experiments](#planned-experiments)
+- [Tools](#tools)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Goals
 
@@ -28,7 +40,7 @@ collects my notes, examples and tutorials step by step.
 - Turn “invisible” radio waves into something human and visual
   (images, graphs, audio).
 - Publish simple, beginner-friendly guides and scripts that others can reuse.
-- Gradually provide **bilingual material (English + Georgian)** so local
+- Gradually provide bilingual material (English + Georgian) so local
   learners don’t get blocked by language.
 
 ## Why this project matters (especially in Georgia)
@@ -49,7 +61,7 @@ I am just starting this project.
 Right now this repo contains:
 
 - Study notes and links I use to learn the basics (`docs/` and `notes/`)
-- A learning plan and ideas for future workshops
+- A learning plan, roadmap, and ideas for future workshops
 - Plans for future HackRF One setups and antennas
 - Example Python scripts for working with IQ recordings (`examples/`)
 
@@ -58,29 +70,25 @@ As soon as I have access to HackRF One, I will start adding:
 - GNU Radio flowgraphs
 - Example scripts for decoding different signals
 - Step-by-step tutorials with screenshots
-- Short explanations and summaries in **Georgian** alongside English
+- Short explanations and summaries in Georgian alongside English
 
-## Planned Experiments
+## Repository Structure
 
-1. **FM Broadcast** – basic tuning, filtering and demodulation.  
-2. **ADS-B** – receive aircraft beacons and visualize nearby flights.  
-3. **Weather Satellites** – record a pass and decode an image of the Earth.  
-4. **Amateur Satellites** – listen to and decode amateur radio satellites
-   where allowed.
+A quick overview of the main folders in this project:
 
-## Tools
+- `docs/` – learning plan, roadmap, HackRF study notes and experiment ideas  
+- `notes/` – external links and references I use while learning SDR and satellites  
+- `examples/` – small Python scripts for generating and analysing IQ recordings  
+- `images/` (planned) – screenshots of spectra, waterfalls, and satellite experiments
 
-- HackRF One (planned main SDR)
-- GNU Radio / GQRX / SDRangel (FOSS tools)
-- Linux or Windows laptop
+## Quick Start
 
-## Contributing
+These scripts are designed to work with any complex64 IQ recordings,
+so they can be used even before I have HackRF One.
 
-If you are also learning SDR and want to share ideas, corrections or better
-examples, feel free to open an issue or pull request. This is a learning
-project, so feedback is very welcome.
+Clone the repository and install the basic Python dependencies:
 
-## License
-
-- Code and scripts: **MIT License**  
-- Text and tutorials: **CC BY-SA 4.0**
+```bash
+git clone https://github.com/DBeria/hackrf-student-sdr-lab.git
+cd hackrf-student-sdr-lab
+pip install -r requirements.txt
