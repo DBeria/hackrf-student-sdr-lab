@@ -24,6 +24,7 @@ collects my notes, examples and tutorials step by step.
 - [Current Status](#current-status)
 - [Repository Structure](#repository-structure)
 - [Learning Notes](#learning-notes)
+- [Examples](#examples)
 - [Quick Start](#quick-start)
 - [Planned Experiments](#planned-experiments)
 - [Tools](#tools)
@@ -78,7 +79,7 @@ As soon as I have access to HackRF One, I will start adding:
 A quick overview of the main folders in this project:
 
 - `docs/` – learning plan, roadmap, HackRF study notes and experiment ideas,  
-  plus conceptual notes on IQ, spectra, FM, and a short summary in Georgian.
+  plus conceptual notes on IQ, spectra, FM, ADS-B, and several short texts in Georgian.
 - `notes/` – external links and references I use while learning SDR and satellites  
 - `examples/` – small Python scripts for generating and analysing IQ recordings  
 - `images/` (planned) – screenshots of spectra, waterfalls, and satellite experiments
@@ -97,11 +98,55 @@ Some of the key documentation files in `docs/`:
 - [`docs/fm-from-iq-basics.md`](docs/fm-from-iq-basics.md)  
   How FM looks in IQ data and a simple explanation of FM demodulation.
 
+- [`docs/adsb-from-iq-basics.md`](docs/adsb-from-iq-basics.md)  
+  Basics of ADS-B aircraft signals (1090 MHz), how they look in IQ, spectrum and
+  waterfall, and how they are decoded.
+
+- [`docs/prerequisites-and-learning-path.md`](docs/prerequisites-and-learning-path.md)  
+  What background knowledge is helpful and a suggested learning path for this lab
+  (IQ → FM → ADS-B → satellites).
+
+**Georgian-language notes:**
+
 - [`docs/iq-basics-ka.md`](docs/iq-basics-ka.md)  
-  Short Georgian-language explanation of IQ data and spectra for local learners.
+  Short Georgian explanation of IQ data and spectra.
+
+- [`docs/sdr-intro-ka.md`](docs/sdr-intro-ka.md)  
+  Intro to SDR and HackRF in Georgian.
+
+- [`docs/signal-chain-ka.md`](docs/signal-chain-ka.md)  
+  Signal chain from antenna to computer, explained in Georgian.
+
+- [`docs/fm-from-iq-basics-ka.md`](docs/fm-from-iq-basics-ka.md)  
+  FM fundamentals from IQ, in Georgian.
+
+- [`docs/adsb-from-iq-basics-ka.md`](docs/adsb-from-iq-basics-ka.md)  
+  ADS-B basics and aircraft signals, in Georgian.
+
+- [`docs/prerequisites-and-learning-path-ka.md`](docs/prerequisites-and-learning-path-ka.md)  
+  Learning roadmap in Georgian for local students.
 
 These documents are written as learning notes for myself and for other
-students who want to understand what SDR is really doing.
+students who want to understand what SDR is really doing, in both English
+and Georgian.
+
+## Examples
+
+Small Python scripts used for learning and visualising IQ data:
+
+- `examples/generate_test_tone.py`  
+  Create synthetic complex64 IQ files with simple test tones for experimenting
+  with spectrum and waterfall plots.
+
+- `examples/plot_spectrum.py`  
+  Load an IQ file and plot its power spectrum using FFT.
+
+- `examples/plot_waterfall.py`  
+  Load an IQ file and generate a time–frequency waterfall view.
+
+- `examples/fm_demo_from_file.py`  
+  Very simple FM demodulation from an IQ recording to a mono WAV file.  
+  Intended as a learning demo, not a full broadcast-quality receiver.
 
 ## Quick Start
 
