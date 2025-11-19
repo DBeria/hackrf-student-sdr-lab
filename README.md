@@ -6,7 +6,7 @@
 
 Student SDR & satellite lab with HackRF One – open learning project.
 
-I am a high school student in Georgia,teaching myself
+I am a high school student in Georgia, teaching myself
 software defined radio and satellite reception.
 Using HackRF One and open source tools, I want to turn my
 learning process into something other beginners can reuse. This repo
