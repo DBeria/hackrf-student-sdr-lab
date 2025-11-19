@@ -2,9 +2,10 @@
 
 Student SDR & satellite lab with HackRF One – open learning project.
 
-Learning software defined radio and satellite reception as a student,
-using HackRF One and open source tools. This repo collects my notes,
-examples and tutorials so other beginners can follow the same path.
+I am a student teaching myself software defined radio and satellite
+reception. Using HackRF One and open source tools, I want to turn my
+learning process into something other beginners can reuse. This repo
+collects my notes, examples and tutorials step by step.
 
 ## Goals
 
@@ -22,10 +23,10 @@ examples and tutorials so other beginners can follow the same path.
 
 I am just starting this project.
 
-Right now this repo will contain:
+Right now this repo contains:
 
-- Study notes and links I use to learn the basics
-- First experiments using free SDR recordings
+- Study notes and links I use to learn the basics (`docs/` and `notes/`)
+- A learning plan and ideas for future workshops
 - Plans for future HackRF One setups and antennas
 
 As soon as I have access to HackRF One, I will start adding:
