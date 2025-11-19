@@ -48,7 +48,7 @@ A pure tone at frequency f₀ can be written as:
 
 > e^{j·2π·f₀·t} = cos(2πf₀t) + j·sin(2πf₀t)
 
-If we look at the **real part**, we get a cosine.
+If we look at the **real part**, we get a cosine.  
 If we look at the **imaginary part**, we get a sine.
 
 When an SDR tunes to a center frequency **f_c**, it effectively moves
@@ -77,7 +77,7 @@ This is very powerful for modulation, demodulation, and analysis.
 
 ## 3. Spectrum: "what frequencies are present?"
 
-A **spectrum** answer this question:
+A **spectrum** answers this question:
 
 > For a short time window, how much energy is there at each frequency?
 
