@@ -1,5 +1,9 @@
 # hackrf-student-sdr-lab
 
+![Status](https://img.shields.io/badge/status-learning_in_progress-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Topic](https://img.shields.io/badge/topic-SDR_&_satellites-orange)
+
 Student SDR & satellite lab with HackRF One – open learning project.
 
 I am a student teaching myself software defined radio and satellite
