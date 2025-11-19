@@ -23,6 +23,7 @@ collects my notes, examples and tutorials step by step.
 - [Why this project matters (especially in Georgia)](#why-this-project-matters-especially-in-georgia)
 - [Current Status](#current-status)
 - [Repository Structure](#repository-structure)
+- [Learning Notes](#learning-notes)
 - [Quick Start](#quick-start)
 - [Planned Experiments](#planned-experiments)
 - [Tools](#tools)
@@ -76,10 +77,31 @@ As soon as I have access to HackRF One, I will start adding:
 
 A quick overview of the main folders in this project:
 
-- `docs/` – learning plan, roadmap, HackRF study notes and experiment ideas  
+- `docs/` – learning plan, roadmap, HackRF study notes and experiment ideas,  
+  plus conceptual notes on IQ, spectra, FM, and a short summary in Georgian.
 - `notes/` – external links and references I use while learning SDR and satellites  
 - `examples/` – small Python scripts for generating and analysing IQ recordings  
 - `images/` (planned) – screenshots of spectra, waterfalls, and satellite experiments
+
+## Learning Notes
+
+Some of the key documentation files in `docs/`:
+
+- [`docs/iq-and-spectra-basics.md`](docs/iq-and-spectra-basics.md)  
+  Beginner notes on IQ data, spectrum and waterfall plots.
+
+- [`docs/signal-chain-overview.md`](docs/signal-chain-overview.md)  
+  High-level overview: from real radio waves, through HackRF and IQ, to software
+  visualisation and decoding.
+
+- [`docs/fm-from-iq-basics.md`](docs/fm-from-iq-basics.md)  
+  How FM looks in IQ data and a simple explanation of FM demodulation.
+
+- [`docs/iq-basics-ka.md`](docs/iq-basics-ka.md)  
+  Short Georgian-language explanation of IQ data and spectra for local learners.
+
+These documents are written as learning notes for myself and for other
+students who want to understand what SDR is really doing.
 
 ## Quick Start
 
@@ -91,4 +113,4 @@ Clone the repository and install the basic Python dependencies:
 ```bash
 git clone https://github.com/DBeria/hackrf-student-sdr-lab.git
 cd hackrf-student-sdr-lab
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
