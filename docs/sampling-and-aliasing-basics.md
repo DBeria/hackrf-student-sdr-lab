@@ -176,6 +176,45 @@ being a formula.
 
 ---
 
+### Example: tones inside and outside the Nyquist range
+
+Using `aliasing_demo.py` with Fs = 2 MS/s, I generated a few test tones
+and plotted their spectra with `plot_spectrum.py`.
+
+**Tone inside the band (no aliasing)** – peak appears where expected:
+
+![Tone inside Nyquist band](../images/aliasing_tone_right.png)
+
+**Tone outside the band (aliased)** – a higher-frequency tone appears at a
+different position in the baseband spectrum:
+
+![Aliased tone](../images/aliasing_tone_left.png)
+
+**What these plots show**
+
+- In both cases the horizontal axis is **frequency** (MHz) in the baseband
+  window [−Fs/2, +Fs/2], and the vertical axis is **power in dB**.
+- The tall, narrow peaks are **single tones** generated in the IQ data.
+- The flat “floor” is numerical **noise** from the random data and FFT.
+
+In the first spectrum the strongest peak is close to one edge of the band.
+This is a good example of a tone that is **near the Nyquist limit**: it
+still appears as a sharp line, but we are close to the point where moving
+it slightly further out would cause it to **alias** and jump to another
+position in the spectrum.
+
+In the second spectrum the strongest peak is closer to the centre of the
+plot. Here the tone is **comfortably inside** the Nyquist range, so there
+is no aliasing. The peak appears exactly where we expect from the tone
+frequency we used when generating the IQ file.
+
+By changing the tone frequency in `aliasing_demo.py` and re-plotting the
+spectrum, it becomes very clear how:
+
+- tones inside [−Fs/2, +Fs/2] stay in place, and  
+- tones **outside** that range are folded back (aliased) into the window.
+
+
 ## 8. Summary
 
 - Sampling rate (Fs) is how many samples per second we take.  
